@@ -1,14 +1,22 @@
 
-all: brute_force 
+all: brute_force_1 brute_force_2
 
-brute_force: 
-	g++ -Wall brute_force.cpp -o brute_force
+.PHONY: brute_force_2
+brute_force_2:
+	g++ -Wall brute_force_2.cpp -o brute_force_2
 
-run_brute_force: brute_force
-	time ./brute_force
+run_brute_force_2: brute_force_2
+	time ./brute_force_2 input.txt
+
+.PHONY: brute_force_1
+brute_force_1: 
+	g++ -Wall brute_force_1.cpp -o brute_force_1
+
+run_brute_force_1: brute_force_1
+	time ./brute_force_1 input.txt
 
 format: 
 	clang-format -i -style=Google *.cpp 
 
 clean: 
-	rm brute_force
+	rm brute_force_1 brute_force_2
