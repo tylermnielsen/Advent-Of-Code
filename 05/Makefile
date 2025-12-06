@@ -19,4 +19,4 @@ format:
 	clang-format -i -style=Google *.cpp 
 
 clean: 
-	rm brute_force_1 brute_force_2
+	rm brute_force_1.out brute_force_2.out
