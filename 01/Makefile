@@ -9,3 +9,6 @@ part2:
 
 format: 
 	clang-format -i -style=Google *.cpp
+
+clean: 
+	rm *.out
