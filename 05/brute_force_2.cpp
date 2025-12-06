@@ -59,20 +59,16 @@ int main(int argc, char ** argv) {
       continue; // useless range 
     }
 
-    int64_t comp = 0; 
     // catch overlap 
     if(base > start) {
       start = base; 
-    } else {
-      // if no overlap compensate to make inclusive 
-      comp = 1; 
-    }
+    } 
 
     // cout << "\tadding range of " << stop - start << endl; 
-    count += stop - start + comp;
+    count += (stop - start) + 1;
     // cout << "\ttotal range " << count << endl; 
     
-    base = stop; 
+    base = stop + 1; 
   }
 
   cout << "Total IDs in fresh ranges: " << count << endl;
