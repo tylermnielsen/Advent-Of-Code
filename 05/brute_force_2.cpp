@@ -38,7 +38,7 @@ int main(int argc, char ** argv) {
     getline(f, line);
   }
 
-  debug(cout << "Range count: " << ranges.size() << endl;);
+  cout << "Range count: " << ranges.size() << endl;
 
   // sort ranges by start 
   sort(ranges.begin(), ranges.end(), [](const pair<int64_t, int64_t>& a, const pair<int64_t, int64_t>& b) {
